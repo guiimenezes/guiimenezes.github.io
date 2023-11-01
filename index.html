@@ -9,14 +9,8 @@
         const urlParams = new URLSearchParams(window.location.search);
         const token = urlParams.get("token");
 
-        // Verifica se o token foi extraído corretamente
-        if (token) {
-            // Token foi encontrado, redireciona para o aplicativo móvel com o esquema personalizado
             window.location.href = `intellisyncagendamento://reset-password/${token}`;
-        } else {
-            // Token não foi encontrado, exibe um alerta
-            alert("Token não encontrado na URL.");
-        }
+  
     </script>
 </body>
 </html>
