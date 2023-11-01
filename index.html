@@ -9,9 +9,8 @@
         const urlParams = new URLSearchParams(window.location.search);
         const token = urlParams.get("token");
 
-            window.location.href = `intellisyncagendamento://intellisyncagendamento/reset-password/${token}`;
-  
+        // Redireciona para o aplicativo móvel com o esquema personalizado
+        window.location.href = `intellisyncagendamento://intellisyncagendamento/reset-password/${token}`;
     </script>
 </body>
 </html>
-
