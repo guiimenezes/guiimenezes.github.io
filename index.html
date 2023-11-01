@@ -8,7 +8,7 @@
         // Extrai o token da URL
         const urlParams = new URLSearchParams(window.location.search);
         const token = urlParams.get("token");
-
+        alert(token)
         // Redireciona para o aplicativo móvel com o esquema personalizado
         window.location.href = `intellisyncagendamento://reset-password/${token}`;
     </script>
