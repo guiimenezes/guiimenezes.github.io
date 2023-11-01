@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Redirecionamento</title>
+    <title>Redirecionando...</title>
 </head>
 <body>
     <script>
-        // Detectar se estamos em um dispositivo móvel
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        // Extrai o token da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get("token");
 
-        if (isMobile) {
-            // Se for um dispositivo móvel, redirecione para o link personalizado
-            window.location.href = "intellisyncagendamento://";
-        } else {
-            // Caso contrário, você pode fornecer uma mensagem informando que o link só funciona em dispositivos móveis
-            document.body.innerHTML = "<p>Este link só funciona em dispositivos móveis.</p>";
-        }
+        // Redireciona para o aplicativo móvel com o esquema personalizado
+        window.location.href = `meuproprioprotocolo://reset-password/${token}`;
     </script>
 </body>
 </html>
